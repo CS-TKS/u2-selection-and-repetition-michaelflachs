@@ -20,3 +20,10 @@ elif client == "no":
     round = 3
 
 usefulobject = ["Plant", "Solar Panel", "Tree", "Forest"]
+
+#starting the game / code and etc
+score = 0
+
+for startinggame in score(round):
+    objectgame = object[startinggame]
+    print("object {turn +1}:
