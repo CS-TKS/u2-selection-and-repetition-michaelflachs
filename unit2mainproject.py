@@ -10,7 +10,7 @@ print("Based off your understanding, if you think you are confident type yes, if
 client = input("So what will it be? (yes/no)")
 
 #game section if yes confident there will be more objects
-if client == "yes":
+if client == "Yes":
     difficulty = "hard"
     objects = ["Trash bag", "Car", "Plant", "Plane", "Factory", "Tree", "Animal Cow", "Forest"]
     round = 5
@@ -18,12 +18,45 @@ elif client == "no":
     difficulty = "easy"
     objects = ["Trash", "Ship", "Bus", "Plant", "Humans", "Solar Panel"]
     round = 3
+else:
+    print("Invalid result! The game will now stop")
+    exit()
 
 usefulobject = ["Plant", "Solar Panel", "Tree", "Forest"]
 
-#starting the game / code and etc
+#game beginnign to start
+
 score = 0
 
-for startinggame in score(round):
-    objectgame = object[startinggame]
-    print("object {turn +1}:
+for startgame in range(rounds):
+    objectsgame = objects[startgame]
+    print("Object {startgame + 1}: {objectsgame}")
+    cdecision = input("Do you wish to select this / and eliminate it? (yes/no): ")
+
+
+    if cdecision == "yes":
+        if objectsgame in usefulobject:
+            print("Oh no! You selected the wrong object, this object helps the climate")
+            score -= 1
+        else:
+            print("Good job! This object harms the climate")
+            score += 1
+    elif cdecision == "no":
+        if objectsgame in usefulobject:
+            print("Nice! Good job you helped the climate!")
+            score +=1
+    else:
+            print("Oops! You selected the wrong object which helps the climate")
+            score -=1
+
+            print("idk the problem")
+
+
+
+
+
+
+
+
+
+
