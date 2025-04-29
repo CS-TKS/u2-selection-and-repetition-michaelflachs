@@ -7,14 +7,14 @@ print("Your objective will be to cool down the planet by eliminating objects whi
 print("Based off your understanding, if you think you are confident type yes, if you are not type no")
 
 #processing section
-client = input("So what will it be? (yes/no)")
+client = input("So what will it be? (Yes!/No!)")
 
-#game section if yes confident there will be more objects
-if client == "Yes":
+#game section if yes confident, there will be more objects
+if client == "Yes!":
     difficulty = "hard"
     objects = ["Trash bag", "Car", "Plant", "Plane", "Factory", "Tree", "Animal Cow", "Forest"]
     round = 5
-elif client == "no":
+elif client == "No!":
     difficulty = "easy"
     objects = ["Trash", "Ship", "Bus", "Plant", "Humans", "Solar Panel"]
     round = 3
@@ -26,11 +26,13 @@ usefulobject = ["Plant", "Solar Panel", "Tree", "Forest"]
 
 #game beginnign to start
 
+
+
 score = 0
 
 for startgame in range(rounds):
     objectsgame = objects[startgame]
-    print("Object {startgame + 1}: {objectsgame}")
+    print("Object {startgame + 1}: {usefulobject}")
     cdecision = input("Do you wish to select this / and eliminate it? (yes/no): ")
 
 
@@ -49,7 +51,11 @@ for startgame in range(rounds):
             print("Oops! You selected the wrong object which helps the climate")
             score -=1
 
-            print("idk the problem")
+    print("Thanks for playing! Hopefully you have learnt something new today :)")
+
+
+
+
 
 
 
